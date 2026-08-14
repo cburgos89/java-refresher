@@ -24,6 +24,5 @@ public class Song {
         Song song2 = new Song("Sandstorm", "315");
 
         System.out.println(song1.summary());
-        System.out.println(song2.summary());
     }
 }
