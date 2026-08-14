@@ -1,5 +1,7 @@
 package ch1_2;
 
+import ch1_3.Ebook;
+
 public class Shelf {
     public static void main(String[] args) {
         Book b1 = new Book("Clean Code",
@@ -16,5 +18,9 @@ public class Shelf {
         System.out.println(b2.summary());
         System.out.println("b1 longer? " + b1.isLongerThan(b2));
         System.out.println("Books created: " + Book.libraryCount);
+
+        Ebook e = new Ebook("Clean Code", "Robert Martin", 464, 4.2);
+        System.out.println(e.getTitle());
+        System.out.println(e.getFileSizeMb());
     }
 }
