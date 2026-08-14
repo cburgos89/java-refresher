@@ -15,7 +15,7 @@ public class Ebook extends Book {
     }
 
     @Override
-    public String toString() {
-        return super.toString() + " [ebook, " + fileSizeMb + " MB]";
+    public String catalogLine() {
+        return super.catalogLine() + " [ebook, " + fileSizeMb + " MB]";
     }
 }
