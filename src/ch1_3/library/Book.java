@@ -32,4 +32,9 @@ public class Book extends LibraryItem {
     public String catalogLine() {
         return getTitle() + " by " + getAuthor() + " (" + getPageCount() + " pages)";
     }
+
+    @Override
+    public int loanDays() {
+        return 21;
+    }
 }

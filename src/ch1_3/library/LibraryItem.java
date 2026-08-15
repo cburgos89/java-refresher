@@ -1,6 +1,7 @@
 package ch1_3.library;
 
 public abstract class LibraryItem {
+
     private String title;
 
     public LibraryItem(String title) {
@@ -12,6 +13,7 @@ public abstract class LibraryItem {
     }
 
     public abstract String catalogLine();
+    public abstract int loanDays();
 
     @Override
     public String toString() {

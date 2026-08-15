@@ -12,4 +12,9 @@ public class Dvd extends LibraryItem {
     public String catalogLine() {
         return getTitle() + " (" + runtimeMinutes + " min)";
     }
+
+    @Override
+    public int loanDays() {
+        return 7;
+    }
 }

@@ -8,10 +8,6 @@ public class Ebook extends Book implements Downloadable {
         this.fileSizeMb = fileSizeMb;
     }
 
-    public double getFileSizeMb() {
-        return fileSizeMb;
-    }
-
     @Override
     public double fileSizeMb() {
         return fileSizeMb;
@@ -20,5 +16,10 @@ public class Ebook extends Book implements Downloadable {
     @Override
     public String catalogLine() {
         return super.catalogLine() + " [ebook, " + fileSizeMb + " MB]";
+    }
+
+    @Override
+    public int loanDays() {
+        return 14;
     }
 }
