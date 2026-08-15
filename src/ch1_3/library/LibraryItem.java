@@ -1,4 +1,4 @@
-package ch1_3;
+package ch1_3.library;
 
 public abstract class LibraryItem {
     private String title;

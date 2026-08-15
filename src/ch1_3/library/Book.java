@@ -1,19 +1,15 @@
-package ch1_2;
+package ch1_3.library;
 
-public class Book {
-    String title;
+public class Book extends LibraryItem {
     String author;
     int pageCount;
     static int libraryCount = 0;
 
-    public Book(String title, String author, int pagecount) {
-        this.title = title;
+    public Book(String title, String author, int pageCount) {
+        super(title);
         this.author = author;
-        this.pageCount = pagecount;
+        this.pageCount = pageCount;
         libraryCount = libraryCount + 1;
-    }
-
-    public Book() {
     }
 
 //    String summary() {
@@ -22,10 +18,6 @@ public class Book {
 
     boolean isLongerThan(Book other) {
         return this.pageCount > other.pageCount;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     public String getAuthor() {
@@ -37,7 +29,7 @@ public class Book {
     }
 
     @Override
-    public String toString() {
-        return getTitle() + " by " + getAuthor() + " (" + getPageCount() + " pages";
+    public String catalogLine() {
+        return getTitle() + " by " + getAuthor() + " (" + getPageCount() + " pages)";
     }
 }

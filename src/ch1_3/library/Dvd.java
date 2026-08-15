@@ -1,4 +1,4 @@
-package ch1_3;
+package ch1_3.library;
 
 public class Dvd extends LibraryItem {
     private int runtimeMinutes;
