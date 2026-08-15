@@ -1,11 +1,18 @@
 package ch1_4.catalog;
 
 import ch1_3.library.Book;
+import ch1_3.library.Downloadable;
 import ch1_3.library.LibraryItem;
 import ch1_3.library.Dvd;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Catalog {
+
+    public static <T extends LibraryItem & Downloadable> void printDownload(T item) {
+        System.out.println(item.getTitle() + " - " + item.fileSizeMb() + " MB");
+    }
 
     public static void main(String[] args) {
         ArrayList<LibraryItem> shelf = new ArrayList<>();
@@ -20,5 +27,16 @@ public class Catalog {
         for (LibraryItem item : shelf) {
             System.out.println(item);
         }
+
+        Map<String, LibraryItem> byTitle = new HashMap<>();
+
+        for (LibraryItem item : shelf) {
+            byTitle.put (item.getTitle(), item);
+        }
+
+        LibraryItem hit = byTitle.get("Clean Code");
+        System.out.println(hit);
+        LibraryItem miss = byTitle.get("Free Bird");
+        System.out.println(miss);
     }
 }
